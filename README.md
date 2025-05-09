@@ -1,12 +1,10 @@
 # TP6 - Desarrollo Web (EAD.DESWEB) - Aplicaciones de Tres Capas
 
 ## 👨‍💻 Integrantes
-<<<<<<< HEAD
-- Alejandro Piccolo
-=======
-- [Alejandro Piccolo]
-- 
->>>>>>> c0288663a3a1972fb1284f668b17d12251aef120
+
+  - [Alejandro Piccolo]
+  - [Enrico A. Maria Del Rosario]
+
 
 ---
 
