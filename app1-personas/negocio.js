@@ -1,7 +1,9 @@
-const form = document.getElementById("personaForm");
-const lista = document.getElementById("listaPersonas");
+// negocio.js - Funciones de negocio (agregar, eliminar personas y productos)
 
-form.addEventListener("submit", function (e) {
+const formPersona = document.getElementById("personaForm");
+const listaPersonas = document.getElementById("listaPersonas");
+
+formPersona.addEventListener("submit", function (e) {
   e.preventDefault();
 
   const persona = {
@@ -12,11 +14,11 @@ form.addEventListener("submit", function (e) {
 
   guardarPersona(persona);
   mostrarPersonas();
-  form.reset();
+  formPersona.reset();
 });
 
 function mostrarPersonas() {
-  lista.innerHTML = "";
+  listaPersonas.innerHTML = "";
   const personas = obtenerPersonas();
   personas.forEach((p, index) => {
     const li = document.createElement("li");
@@ -30,8 +32,14 @@ function mostrarPersonas() {
     };
 
     li.appendChild(btn);
-    lista.appendChild(li);
+    listaPersonas.appendChild(li);
   });
+}
+
+function eliminarPersona(index) {
+  const personas = obtenerPersonas();
+  personas.splice(index, 1);
+  localStorage.setItem("personas", JSON.stringify(personas));
 }
 
 mostrarPersonas();

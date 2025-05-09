@@ -1,7 +1,9 @@
-const form = document.getElementById("productoForm");
-const lista = document.getElementById("listaProductos");
+// negocio.js - Funciones de negocio (agregar, eliminar productos)
 
-form.addEventListener("submit", function (e) {
+const formProducto = document.getElementById("productoForm");
+const listaProductos = document.getElementById("listaProductos");
+
+formProducto.addEventListener("submit", function (e) {
   e.preventDefault();
 
   const producto = {
@@ -12,11 +14,11 @@ form.addEventListener("submit", function (e) {
 
   guardarProducto(producto);
   mostrarProductos();
-  form.reset();
+  formProducto.reset();
 });
 
 function mostrarProductos() {
-  lista.innerHTML = "";
+  listaProductos.innerHTML = "";
   const productos = obtenerProductos();
   productos.forEach((p, index) => {
     const li = document.createElement("li");
@@ -30,7 +32,7 @@ function mostrarProductos() {
     };
 
     li.appendChild(btn);
-    lista.appendChild(li);
+    listaProductos.appendChild(li);
   });
 }
 
