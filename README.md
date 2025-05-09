@@ -1,8 +1,8 @@
 # TP6 - Desarrollo Web (EAD.DESWEB) - Aplicaciones de Tres Capas
 
 ## 👨‍💻 Integrantes
-- [Tu Nombre Completo]
-- [Nombre del compañero si tenés]
+- [Alejandro Piccolo]
+- 
 
 ---
 
